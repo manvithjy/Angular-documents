@@ -1,0 +1,128 @@
+RxJS(Reactive extension of javascript)
+
+1)-->Reactive programming is a new way of building apps. 
+
+-->our appln will react to changes and handle the data streams rather than we writing each handling seprately.
+
+=======================================
+
+2)--> RxJS is a library which helps us to make async calls and implement callback mechanisms easily using observables.
+
+	-->RxJS consist of 3 things:
+
+  		 a)Observable
+  		 b)satelite data types: Observers, Schedulers,Subjects
+   		 c)Operator: 
+			 Array methods: map,filter,reduce
+
+	-->helps us in data streams.
+
+=======================================
+
+3)Observable:
+-->basically, Observable emits the data over a period of time.
+-->Observable needs to be subscribed else it wont do anything on its own.
+
+-->Observer has 3 methods:
+	-next,complete,error
+
+-->angular uses observable for routing,form....  
+
+=======================================
+	ex1: In Ecommerce cart appln
+		->orderStatus value - NULL
+		->user comes and place an order
+		 ->orderStatus will change over time // continously changing
+			->orderStatus = order placed
+			->orderStatus = order received.
+			->orderStatus = order submitted.
+			->orderStatus = order completed.
+
+Subscriber:
+-->it will listen to the observable for data changes/updates.
+-->orderstatus - latest values always - since we have subscribed to it.
+
+=======================================
+
+	(IMP / easy)
+	ex2:
+		youtube channel - ashok it
+
+		observable:
+			-Data(videos) is posted every single day.
+
+		content: 
+			-video
+			-Community message
+
+		subscribed:
+			-subscribed to ashok it channel.
+			-I get notification everytime when ashok it post a video.
+
+=======================================
+
+RxJs operators:
+
+--> operator is a pure function.
+
+->it provides useful operators like filter,map etc... which helps us to reduce lot of effort in writing custom logic.
+
+-->what is pure function?
+==function will return same value when same input value is passed.
+
+==operator takes observable as input and output will also be an observable 
+ 
+
+types of Operators:
+
+i)Creation
+ii)Mathematical
+iii)join                  //IMP 
+iv)transformation
+v)filtering
+vi)utility
+vii)conditional
+viii)multicasting
+ix)error handling
+
+====================================
+
+1)of Operator:
+-->it helps to create Observable from string,array or object.
+
+where to use it?
+-->there may be a case that whenever we get input as array or string or object but we need to convert into observable in such case we can go with Of operator.
+
+==================================
+2)from operator:
+
+-->From operator will create an observable from an array,an array-like object,a promise,an iterable object.
+
+===================================
+diff btw From and Of operator:
+
+-->From operator creates observable from array or array-like object.
+
+--> Of operator creates observable from string,array,object
+
+====================================
+
+3)fromEvent
+
+-->creates an observable that emits events of a specific type coming from the given event-target.
+
+-->we can bind Target Elements and methods to make sure we getObservable as output.
+
+--> angular specific : we will use @ViewChild,nativeElement as target element and bind events.
+
+
+
+
+
+
+
+
+
+
+		
+
